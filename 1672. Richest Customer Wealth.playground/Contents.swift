@@ -42,6 +42,8 @@
 // first solution without high order functions
 // time complexity O(n x m)
 class Solution {
+    // first solution without high order functions
+    // time complexity O(n x m)
     func maximumWealth(_ accounts: [[Int]]) -> Int {
         // define maximum wealth variable
         var maxWealth = 0
@@ -60,8 +62,28 @@ class Solution {
         // return maximum wealth
         return maxWealth
     }
+    
+    // second solution with high order functions
+    // time complexity O(n x m)
+    func maximumWealthHighOrder(_ accounts: [[Int]]) -> Int {
+        // define maximum wealth variable
+        var maxWealth = 0
+        // interate each customer with "map" function
+        accounts.map { customer in
+            // calculate wealth of current customer with "reduce" function
+            let customerWealth = customer.reduce(0) { result, bankAccount in
+                // calculate wealth of current customer
+                return result + bankAccount
+            }
+            // check if current customer is the reachest
+            maxWealth = max(maxWealth, customerWealth)
+        }
+        // return maximum wealth
+        return maxWealth
+    }
 }
 
 let solution = Solution()
 let input = [[7, 1, 3], [2, 8, 7], [1, 9, 5]]
 solution.maximumWealth(input)
+solution.maximumWealthHighOrder(input)
