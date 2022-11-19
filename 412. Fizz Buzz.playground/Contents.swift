@@ -44,7 +44,26 @@ class Solution {
         }
         return array
     }
+    
+    // second elegant solution with switch/case statement using "isMultiple(of:)" condition
+    // time complexity O(n)
+    func fizzBuzzSecond(_ n: Int) -> [String] {
+        // create an empty array of String
+        var array = [String]()
+        // fill the array
+        for i in 1...n {
+            // check conditions with switch/case statement using "isMultiple(of:)" condition
+            switch (i.isMultiple(of: 3), i.isMultiple(of: 5)) {
+            case (true, true): array.append("FizzBuzz")
+            case (true, false): array.append("Fizz")
+            case (false, true): array.append("Buzz")
+            default: array.append("\(i)")
+            }
+        }
+        return array
+    }
 }
 
 let solution = Solution()
 solution.fizzBuzz(5)
+solution.fizzBuzzSecond(5)
