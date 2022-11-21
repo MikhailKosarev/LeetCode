@@ -57,6 +57,22 @@ class Solution {
         // return middle node
         return current
     }
+    
+    // fast solution with two pointers
+    // time complexity = O(n/2)
+    func middleNodeTwoPointers(_ head: ListNode?) -> ListNode? {
+        // define middleNode and endNode variables
+        var middleNode = head, endNode = head
+        // check if the endNode is last
+        while endNode?.next != nil {
+            // move middleNode by one
+            middleNode = middleNode?.next
+            // move endNode by two
+            endNode = endNode?.next?.next
+        }
+        // return middle node
+        return middleNode
+    }
 }
 
 // define nodes
@@ -68,3 +84,4 @@ let head = ListNode(1, two)
 // solution
 let solution = Solution()
 solution.middleNode(head)
+solution.middleNodeTwoPointers(head)
