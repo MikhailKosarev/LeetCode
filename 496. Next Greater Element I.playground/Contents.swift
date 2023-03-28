@@ -35,7 +35,7 @@
 class Solution {
     
     // first solution with for loop
-    // time complexity O(n2) - worst case
+    // time complexity O(n * m), where n is the length of nums1 and m is the length of nums2
     func nextGreaterElement(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         // define result array
         var result = [Int]()
@@ -63,7 +63,7 @@ class Solution {
     }
     
     // the same solution but wirh high order function
-    // time complexity O(n2) - worst case
+    // time complexity O(n * m), where n is the length of nums1 and m is the length of nums2
     func nextGreaterElement2(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         // define result array
         var result = [Int]()
@@ -91,7 +91,7 @@ class Solution {
     }
     
     // solution with hash map
-    // time complexity O(2n)
+    // time complexity O(n + m), where n is the length of nums1 and m is the length of nums2
     func nextGreaterElementMap(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         // define hash map for [element: next greater element]
         var hashMap = [Int: Int]()

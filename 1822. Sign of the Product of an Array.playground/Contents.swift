@@ -34,11 +34,13 @@
 class Solution {
     
     // straight solution with overflow error
+    // time complexity = O(n), where n is the length of the given array
     func arraySign(_ nums: [Int]) -> Int {
         let x = nums.reduce(1, *)
         return signFunc(x: x)
     }
     
+    // time complexity = O(1)
     func signFunc(x: Int) -> Int {
         switch x {
         case let x where x > 0: return 1
@@ -47,8 +49,7 @@ class Solution {
         }
     }
     
-    // fast solution with early return
-    // time complexity worst case = O(n), best case = O(1)
+    // time complexity = O(n), where n is the length of the given array
     func arraySignFast(_ nums: [Int]) -> Int {
         // check if there is zero in the array and if it's true then return 0
         guard !nums.contains(0) else { return 0 }
@@ -58,15 +59,14 @@ class Solution {
         return negative.count % 2 != 0 ? -1 : 1
     }
     
-    // elegant solution with high order function one line, but not the best time complexity
-    // time complexity O(n)
+    // elegant solution with high order function one line
+    // time complexity = O(n), where n is the length of the given array
     func arraySignOneLiner(_ nums: [Int]) -> Int {
         // use reduce and signum to product the sign of element
         nums.reduce(1, { $0 * $1.signum() })
     }
-    
-    // the best solution with early return
-    // time complexity worst case = O(n), best case = O(1)
+
+    // time complexity = O(n), where n is the length of the given array
     func arraySignFastest(_ nums: [Int]) -> Int {
         // check if there is zero in the array and if it's true then return 0
         guard !nums.contains(0) else { return 0 }

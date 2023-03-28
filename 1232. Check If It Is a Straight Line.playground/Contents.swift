@@ -27,7 +27,7 @@ class Solution {
     // simple solution with using Equation of a Straight Line
     // let change division into multiplication (x3 - x1) / (x2 - x1) == (y3 - y1) / (y2 - y1) =>
     // (x2 - x1) * (y3 - y1) == (x3 - x1) * (y2 - y1)
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of coordinates array
     func checkStraightLine(_ coordinates: [[Int]]) -> Bool {
         // check if we have only two points
         guard coordinates.count > 2 else { return true }
@@ -49,7 +49,7 @@ class Solution {
     }
     
     // solution as previous but a little shorter and faster
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of coordinates array
     func checkStraightLineShorter(_ coordinates: [[Int]]) -> Bool {
         // check if we have only two points
         guard coordinates.count > 2 else { return true }

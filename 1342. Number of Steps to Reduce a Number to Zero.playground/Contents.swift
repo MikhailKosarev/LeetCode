@@ -36,7 +36,7 @@
 
 
 // simple solution with while statement
-// time complexity O(log n)
+// time complexity O(log n), where n is the given number
 class Solution {
     func numberOfSteps(_ num: Int) -> Int {
         // create counter and result variables
@@ -60,4 +60,4 @@ class Solution {
 }
 
 let solution = Solution()
-solution.numberOfSteps(14)
+solution.numberOfSteps(5)

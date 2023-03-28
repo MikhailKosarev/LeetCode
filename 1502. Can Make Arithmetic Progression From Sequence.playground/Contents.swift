@@ -25,7 +25,7 @@ import Foundation
 
 class Solution {
     // simple and the fastest solution with sorting and looping all the elements
-    // time complexity O(n*logn)
+    // time complexity O(n * logn), where n is the length of the given array
     func canMakeArithmeticProgression(_ arr: [Int]) -> Bool {
         // create a sorted copy of input array
         let sortedArr = arr.sorted()

@@ -20,7 +20,7 @@
  */
 
 class Solution {
-    // time complexity O(n * logn)
+    // time complexity O(n * logn) where n is the length of nums
     func largestPerimeter(_ nums: [Int]) -> Int {
         // create a mutable cipy of nums and sort it decreasing
         let sorted = nums.sorted(by: >)

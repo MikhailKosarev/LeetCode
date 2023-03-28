@@ -31,6 +31,7 @@ import Foundation
 class Solution {
     
     // easy additional function to get the sum of squarted digits
+    // time complexity = O(n), where n is the number of digits in the given number
     func getSum(_ num: Int) -> Int {
         // create an array of digits from number
         let digits = String(num).compactMap { $0.wholeNumberValue }
@@ -41,7 +42,7 @@ class Solution {
     }
     
     // solution with Set to check infinite loop
-    // time complexity = O(logn)
+    // time complexity = O(n), where n is the given number
     func isHappy(_ n: Int) -> Bool {
         // define an empty set to check
         var sumSet: Set<Int> = []
@@ -61,7 +62,7 @@ class Solution {
     }
     
     // solution with adapting Floyd Cycle detection algorithm
-    // time complexity = O(logn)
+    // time complexity = O(logn), where n is the given number
     func isHappyFloyd(_ n: Int) -> Bool {
         // define fast and slow "sums"
         var slow = n, fast = n
@@ -81,6 +82,9 @@ class Solution {
 }
 
 let solution = Solution()
+
+
+solution.getSum(151)
 let n = 1111111
 solution.isHappy(n)
 solution.isHappyFloyd(n)

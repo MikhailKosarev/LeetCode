@@ -26,7 +26,7 @@
 
 class Solution {
     // solution without sorting, using high order function
-    // time complexity O(n)
+    // time complexity O(n), where n is the length of salary array
     func average(_ salary: [Int]) -> Double {
         // use "reduce" to get the total sum
         var total = Double(salary.reduce(0, { partialResult, current in
@@ -41,13 +41,13 @@ class Solution {
     }
     
     // one liner solution with high order function
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of salary array
     func averageOneLiner(_ salary: [Int]) -> Double {
         Double(salary.reduce(0, +) - salary.min()! - salary.max()!) / Double(salary.count - 2)
     }
     
     // solution with high order function reduce(into:)
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of salary array
     func averageSmart(_ salary: [Int]) -> Double {
         let (minimum, maximum, total) = salary.reduce(into: (Int.max, 1000, 0)) {
             $0.0 = min($0.0, $1)
@@ -58,7 +58,7 @@ class Solution {
     }
     
     // solution with sorting
-    // time complexity = O(n*logn*n) = O(n2 * logn)
+    // time complexity = O(n * logn), where n is the length of salary array
     func averageSorting(_ salary: [Int]) -> Double {
         // create a mutable copy of the original array
         var sortSalary = salary.sorted()

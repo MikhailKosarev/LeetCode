@@ -21,7 +21,7 @@
 
 class Solution {
     // simpliest solution
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the difference between low and high
     func countOdds(_ low: Int, _ high: Int) -> Int {
         // define count variable
         var count = 0
