@@ -40,7 +40,7 @@
  */
 
 // first solution without high order functions
-// time complexity O(n x m)
+// time complexity O(n * m), where n is the number of customers and m is the max number of accounts for one customer
 class Solution {
     // first solution without high order functions
     // time complexity O(n x m)

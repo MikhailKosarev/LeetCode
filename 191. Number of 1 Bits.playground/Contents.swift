@@ -34,7 +34,7 @@ import Foundation
 
 class Solution {
     // loop arythmetic solution
-    // time complexity = O(n)
+    // time complexity = O(logn), where n is the given number
     func hammingWeight(_ n: UInt) -> UInt {
         var n = n, result: UInt = 0
         // check if it the last number
@@ -48,7 +48,7 @@ class Solution {
     }
     
     // recursion solution
-    // time complexity = O(n)
+    // time complexity = O(logn), where n is the given number
     func hammingWeightRecursion(_ n: UInt) -> UInt {
         // base case if it's the last number
         if n == 0 {
@@ -59,7 +59,7 @@ class Solution {
     }
     
     // binary shifting solution
-    // time complexity = O(n)
+    // time complexity = O(logn), where n is the given number
     func hammingWeightShift(_ n: UInt) -> UInt {
         var n = n, result: UInt = 0
         // check if it the last number

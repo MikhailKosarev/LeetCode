@@ -35,7 +35,7 @@ public class ListNode {
 
 class Solution {
     // simple slow solution
-    // time complexity O(n + n/2)
+    // time complexity O(n), where n is the length of the given linked list
     func middleNode(_ head: ListNode?) -> ListNode? {
         // define middle and count variables
         var middle = 0, count = 0
@@ -59,7 +59,7 @@ class Solution {
     }
     
     // fast solution with two pointers
-    // time complexity = O(n/2)
+    // time complexity O(n), where n is the length of the given linked list
     func middleNodeTwoPointers(_ head: ListNode?) -> ListNode? {
         // define middleNode and endNode variables
         var middleNode = head, endNode = head

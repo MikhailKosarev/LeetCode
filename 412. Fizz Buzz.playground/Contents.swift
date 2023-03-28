@@ -28,7 +28,7 @@
 
 class Solution {
     // first solution with switch/case statement using "true" as the tag
-    // time complexity O(n)
+    // time complexity O(n), where n is a given integer
     func fizzBuzz(_ n: Int) -> [String] {
         // create an empty array of String
         var array = [String]()
@@ -46,7 +46,7 @@ class Solution {
     }
     
     // second elegant solution with switch/case statement using "isMultiple(of:)" condition
-    // time complexity O(n)
+    // time complexity O(n), where n is a given integer
     func fizzBuzzSecond(_ n: Int) -> [String] {
         // create an empty array of String
         var array = [String]()

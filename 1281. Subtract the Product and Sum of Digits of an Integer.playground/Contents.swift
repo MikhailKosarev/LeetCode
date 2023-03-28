@@ -30,7 +30,7 @@ import Foundation
 
 class Solution {
     // straight solution
-    // time complexity = O(1)
+    // time complexity = O(n), where n is the number of digits in the given number
     func subtractProductAndSum(_ n: Int) -> Int {
         // define mutable n, product and sum variables
         var n = n, product = 1, sum = 0
@@ -50,6 +50,7 @@ class Solution {
     }
     
     // functional solution with high order functions
+    // time complexity = O(n), where n is the number of digits in the given number
     func subtractProductAndSumSimple(_ n: Int) -> Int {
         // convert n to String and then to array of digits
         let arrayN = String(n).compactMap { $0.wholeNumberValue }

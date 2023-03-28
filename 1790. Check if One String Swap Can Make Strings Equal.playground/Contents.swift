@@ -29,7 +29,7 @@
  */
 
 class Solution {
-    // time complexity O(2*logn + n)
+    // time complexity O(n * logn), where n is the length of the longest given string
     func areAlmostEqual(_ s1: String, _ s2: String) -> Bool {
         // check if strings are equal, then immediately return true
         guard s1 != s2 else { return true }

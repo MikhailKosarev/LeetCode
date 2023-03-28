@@ -35,7 +35,7 @@ import Foundation
 
 class Solution {
     // slow solution with high order function
-    // time complexity O(n) + 1
+    // time complexity O(n), where n is the length of the points
     func nearestValidPoint(_ x: Int, _ y: Int, _ points: [[Int]]) -> Int {
         // define new array of valid points
         var validPoints = [[Int]]()
@@ -68,7 +68,7 @@ class Solution {
     }
     
     // simple fast solution
-    // time complexity O(n)
+    // time complexity O(n), where n is the length of the points
     func nearestValidPointFast(_ x: Int, _ y: Int, _ points: [[Int]]) -> Int {
         // set smallest index as "-1" (for case if there are no valid points) and the smallest distance as a max Int value
         var smallestIndex = -1, smallestDistance = Int.max

@@ -67,7 +67,7 @@ class Solution {
         return sum
     }
     
-    // fast solution, time complexity O(n)
+    // fast solution, time complexity O(n), where n is the length of the given array
     // explanation:
     // To get the answer, we just need to sum the contribution * number
     // To get the contribution of each number to odd length subarrays, we just need to divide it by 2
@@ -87,7 +87,7 @@ class Solution {
     }
     
     // an example of slow solution with brutforcing all the elements in two loops
-    // time complexity O(n2)
+    // time complexity O(n^2), where n is the length of the given array
     func sumOddLengthSubarraysSlow(_ arr: [Int]) -> Int {
         // define sum variable
         var sum = 0

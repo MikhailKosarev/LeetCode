@@ -23,7 +23,7 @@
 
 class Solution {
     // solution with high order function
-    // time complexity O(n)
+    // time complexity O(n), where n is the length of the nums
     func moveZeroes(_ nums: inout [Int]) {
         // count of nums in original array
         var count = nums.count
@@ -36,7 +36,7 @@ class Solution {
     }
     
     // second solution with while loop
-    // time complexity O(n) worst case
+    // time complexity O(n), where n is the length of the nums
     func moveZeroesSecond(_ nums: inout [Int]) {
         // define zero counter and iterator
         var zeroCounter = 0, i = 0

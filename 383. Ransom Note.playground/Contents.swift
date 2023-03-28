@@ -24,7 +24,7 @@
 
 class Solution {
     // solution with dictionary and high order functions
-    // time complexity = O(n*m)
+    // time complexity = O(n + m), where n is the length of the magazine and m is the length of note
     func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
         // check if we have enough letters in the magazine to fill the ransomeNote
         guard ransomNote.count <= magazine.count else { return false }
@@ -45,7 +45,7 @@ class Solution {
     }
 
     // fast solution without dictionaries
-    // time complexity O(n)
+    // time complexity = O(n + m), where n is the length of the magazine and m is the length of note
     func canConstructFast(_ ransomNote: String, _ magazine: String) -> Bool {
         // create a mutable copy of magazine
         var magazineCopy = magazine
