@@ -26,7 +26,7 @@
 
 class Solution {
     // straight solution
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of `s`
     func freqAlphabets(_ s: String) -> String {
         // define an empty result string
         var result = ""

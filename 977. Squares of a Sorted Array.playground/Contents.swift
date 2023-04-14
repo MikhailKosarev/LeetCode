@@ -1,4 +1,4 @@
-/**
+/*
  977. Squares of a Sorted Array
  https://leetcode.com/problems/squares-of-a-sorted-array/
  
@@ -24,7 +24,7 @@
 
 class Solution {
     // trivial solution
-    // time complexity O(n + n*logn) = O(n*logn)
+    // time complexity = O(n * logn), where n is the length of `nums`
     func sortedSquares(_ nums: [Int]) -> [Int] {
         nums
             .map { $0 * $0 }
@@ -32,7 +32,7 @@ class Solution {
     }
     
     // solution with two pointers
-    // more code, but time complexity = O(n + n) = O(n)
+    // more code, but time complexity = O(n), where n is the length of `nums`
     func sortedSquaresFast(_ nums: [Int]) -> [Int] {
         var result = [Int]()
         var leftPointer = 0
@@ -56,7 +56,7 @@ class Solution {
     
     // solution with two pointers
     // less code, but less readability
-    // time complexity the same = O(n + n) = O(n)
+    // time complexity the same = O(n), where n is the length of `nums`
     func sortedSquaresFastLessCode(_ nums: [Int]) -> [Int] {
         var result = [Int]()
         var leftPointer = 0

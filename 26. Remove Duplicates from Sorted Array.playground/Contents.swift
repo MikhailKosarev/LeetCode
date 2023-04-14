@@ -48,7 +48,7 @@
 
 class Solution {
     // straight forward solution
-    // time complexity: O(n), where n is the length of nums
+    // time complexity: O(n), where n is the length of `nums`
     // space complexity: O(1)
     func removeDuplicates(_ nums: inout [Int]) -> Int {
         var i = 0

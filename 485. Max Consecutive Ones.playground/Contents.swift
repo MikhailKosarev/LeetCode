@@ -22,7 +22,7 @@
 
 class Solution {
     // straightforward solution with 'for' loop
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of nums
     func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
         var currentNumber = 0
         var maxNumber = 0
@@ -41,7 +41,7 @@ class Solution {
     }
     
     // straightforward solution with high order function
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of nums
     func findMaxConsecutiveOnesHigh(_ nums: [Int]) -> Int {
         var currentNumber = 0
         var maxNumber = 0

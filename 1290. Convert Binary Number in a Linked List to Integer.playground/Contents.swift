@@ -34,7 +34,7 @@ public class ListNode {
 
 class Solution {
     // straight solution with String converting
-    // time complexity O(n)
+    // time complexity O(n), where n is the length of Linked List
     func getDecimalValue(_ head: ListNode?) -> Int {
         // set current node as a head
         var current: ListNode? = head
@@ -52,7 +52,7 @@ class Solution {
     }
     
     // solution with bitwise operators
-    // time complexity O(n)
+    // time complexity O(n), where n is the length of Linked List
     func getDecimalValueFast(_ head: ListNode?) -> Int {
         // define result variable and set )
         var result: Int = 0
@@ -70,7 +70,7 @@ class Solution {
     }
     
     // elegant simple solution
-    // time complexity O(n)
+    // time complexity O(n), where n is the length of Linked List
     func getDecimalValueOneMore(_ head: ListNode?) -> Int {
         // define result variable and set )
         var result: Int = 0

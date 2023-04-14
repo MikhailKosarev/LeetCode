@@ -33,8 +33,8 @@
 
 class Solution {
     // straight solution
-    // time complexity = O(n)
-    // space cpmplexity = O(1)
+    // time complexity = O(n), where n is the number of elements in the matrix
+    // space complexity = O(1)
     func diagonalSum(_ mat: [[Int]]) -> Int {
         // define sum variable
         var sum = 0

@@ -28,7 +28,7 @@
  */
 
 // first solution with for loop
-// time complexity = O(n*m)
+// time complexity = O(n * m), where n is the length of `nums` and m is the number of digits in the logest num.
 class Solution {
     func findNumbers(_ nums: [Int]) -> Int {
         var maxEven = 0
@@ -49,7 +49,7 @@ class Solution {
     }
     
     // solution with using a converting to String to be able to use count method
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of `nums`
     func findNumbersShort(_ nums: [Int]) -> Int {
         var count = 0
         for i in nums {
@@ -59,9 +59,10 @@ class Solution {
     }
     
     // solution with using a converting to String to be able to use count method and high order function to filter the array
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of `nums`
     func findNumbersOneLiner(_ nums: [Int]) -> Int {
-        nums.filter { String($0).count.isMultiple(of: 2) }.count
+        nums.filter { String($0).count.isMultiple(of: 2) }
+            .count
     }
 }
 

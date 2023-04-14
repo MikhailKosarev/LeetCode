@@ -26,7 +26,7 @@
 
 class Solution {
     // straight solution
-    // time complexity = O(2n)
+    // time complexity = O(n), where n is the number of elements in the matrix
     // space complexity = O(2)
     func matrixReshape(_ mat: [[Int]], _ r: Int, _ c: Int) -> [[Int]] {
         // check if we can reshape the matrix, otherwise return original array

@@ -31,8 +31,8 @@ import Foundation
 
 class Solution {
     // straight solution
-    // time complexity = O(n)
-    // space complexity = O(2n)
+    // time complexity = O(n), where n - is the lenght of command
+    // space complexity = O(n), where n - is the lenght of command
     func interpret(_ command: String) -> String {
         // create an array from input string
         var commandArray = Array(command)
@@ -71,10 +71,11 @@ class Solution {
     }
     
     // short written solution
-    // time complexity - not sure, but think O(2n)
+    // time complexity  = O(n), where n - is the lenght of command
     // space complexity = O(1)
     func interpretShort(_ command: String) -> String {
-        return command.replacingOccurrences(of: "()", with: "o")
+        return command
+            .replacingOccurrences(of: "()", with: "o")
             .replacingOccurrences(of: "(al)", with: "al")
     }
 }
