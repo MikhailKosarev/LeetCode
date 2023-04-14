@@ -38,8 +38,8 @@
 
 class Solution {
     // first straight solution
-    // time complexity O(n+m)
-    // space complexity = O(n+m)
+    // time complexity O(n+m), where n - is the lenght of word1 and m - is the length of word2
+    // space complexity = O(n+m), where n - is the lenght of word1 and m - is the length of word2
     func mergeAlternately(_ word1: String, _ word2: String) -> String {
         // create an empty result array of chars
         var result = [Character]()
@@ -74,8 +74,8 @@ class Solution {
     }
     
     // second shorter solution with while loop
-    // time complexity O(n+m)
-    // space complexity = O(n+m)
+    // time complexity O(n+m), where n - is the lenght of word1 and m - is the length of word2
+    // space complexity = O(n+m), where n - is the lenght of word1 and m - is the length of word2
     func mergeAlternatelyImproved(_ word1: String, _ word2: String) -> String {
         // create an empty result array of chars
         var result = ""

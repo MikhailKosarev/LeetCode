@@ -24,7 +24,7 @@
 
 class Solution {
     // straight solution with hash table
-    // time complexity = O(2n)
+    // time complexity = O(n+m), where n is the length of `s` and m is the length of `t`
     func findTheDifference(_ s: String, _ t: String) -> Character {
         // define an empty hash table
         var hashTable = [Character: Int]()
@@ -49,7 +49,7 @@ class Solution {
     }
     
     // bitwise solution
-    // time complexity = O(n)
+    // time complexity = O(n+m), where n is the length of `s` and m is the length of `t`
     func findTheDifferenceBitwise(_ s: String, _ t: String) -> Character {
         var res = s.unicodeScalars.reduce(0) { $0 ^ $1.value }
         res = t.unicodeScalars.reduce(res) { $0 ^ $1.value }

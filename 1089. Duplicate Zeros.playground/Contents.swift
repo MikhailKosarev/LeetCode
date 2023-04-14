@@ -24,7 +24,7 @@
 
 class Solution {
     // easy straightforward solution
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of `arr`
     func duplicateZeros(_ arr: inout [Int]) {
         var i = 0
 

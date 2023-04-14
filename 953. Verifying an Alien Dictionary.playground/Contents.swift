@@ -30,6 +30,7 @@
  */
 
 class Solution {
+    // time complexity = O(n * m), where n is the number of words and m is the length of the shorter word.
     func isAlienSorted(_ words: [String], _ order: String) -> Bool {
         guard words.count > 1 else { return true }
         

@@ -23,7 +23,7 @@
 
 class Solution {
     // straight way with hash table
-    // time complexity O(2n)
+    // time complexity = O(n+m), where n is the lentgh of `s` and m is the length of `t`
     func isAnagram(_ s: String, _ t: String) -> Bool {
         // first check if the lengths are equal else immediately return false
         guard s.count == t.count else { return false }
@@ -53,7 +53,7 @@ class Solution {
     }
     
     // straight way with hash table using high order functions
-    // time complexity O(2n)
+    // time complexity = O(n+m), where n is the lentgh of `s` and m is the length of `t`
     func isAnagramHigh(_ s: String, _ t: String) -> Bool {
         // first check if the lengths are equal else immediately return false
         guard s.count == t.count else { return false }
@@ -82,7 +82,7 @@ class Solution {
     
     
     // short solution but without early return
-    // time complexity O(2n)
+    // time complexity = O(n+m), where n is the lentgh of `s` and m is the length of `t`
     func isAnagramOneLiner(_ s: String, _ t: String) -> Bool {
         Dictionary(s.map { ($0, 1) }, uniquingKeysWith: +) == Dictionary(t.map { ($0, 1) }, uniquingKeysWith: +)
     }

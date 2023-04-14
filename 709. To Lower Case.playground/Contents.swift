@@ -30,8 +30,8 @@ class Solution {
     }
     
     // solution without standart function "lowercased"
-    // time complexity = O(n)
-    // space complexity = O(n)
+    // time complexity = O(n), where n is the length of `s`
+    // space complexity = O(n), where n is the length of `s`
     func toLowerCaseNoLibrary(_ s: String) -> String {
         // define an empty String for result value
         var result = ""

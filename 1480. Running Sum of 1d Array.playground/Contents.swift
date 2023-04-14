@@ -28,7 +28,7 @@
 
 class Solution {
     // first solution with new array
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of `nums`
     func runningSum(_ nums: [Int]) -> [Int] {
         // create new array
         var sums = [Int]()
@@ -42,7 +42,7 @@ class Solution {
     }
     
     // second solution with changing the current array
-    // time complexity = O(n)
+    // time complexity = O(n), where n is the length of `nums`
     func runningSum2(_ nums: inout [Int]) -> [Int] {
         // count running sum of other numbers
         for i in 1..<nums.count {

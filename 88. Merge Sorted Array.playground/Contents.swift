@@ -42,7 +42,7 @@
 
 
 class Solution {
-    // time complexity O(m + n)
+    // time complexity O(n + m), where n is `n` and m is `m`
     func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         var p1 = m - 1
         var p2 = n - 1
