@@ -57,3 +57,4 @@ let solution = Solution()
 var nums = [3,2,2,3]
 let val = 3
 solution.removeElement(&nums, val)
+
