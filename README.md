@@ -45,5 +45,5 @@ For all problems, I provide an evaluation of the temporal complexity.
 |1768 |[Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/)| [Swift](./1768.%20Merge%20Strings%20Alternately.playground)|Easy|
 |1779 |[Find Nearest Point That Has the Same X or Y Coordinate](https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/)| [Swift](./1779.%20Find%20Nearest%20Point%20That%20Has%20the%20Same%20X%20or%20Y%20Coordinate.playground)|Easy|
 |1790 |[Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/)|[Swift](./1790.%20Check%20if%20One%20String%20Swap%20Can%20Make%20Strings%20Equal.playground)|Easy|
-|1822|[1822. Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/)| [Swift](./1822.%20Sign%20of%20the%20Product%20of%20an%20Array.playground)|Easy|
+|1822|[Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array/)| [Swift](./1822.%20Sign%20of%20the%20Product%20of%20an%20Array.playground)|Easy|
 |2235|[Add Two Integers](https://leetcode.com/problems/add-two-integers/)| [Swift](./2235.%20Add%20Two%20Integers.playground)|Easy|
