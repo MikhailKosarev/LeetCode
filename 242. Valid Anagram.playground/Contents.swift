@@ -21,9 +21,12 @@
  Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
  */
 
+import XCTest
+
 class Solution {
     // straight way with hash table
     // time complexity = O(n+m), where n is the lentgh of `s` and m is the length of `t`
+    // space complexity = O(n), where n is the lentgh of `s`
     func isAnagram(_ s: String, _ t: String) -> Bool {
         // first check if the lengths are equal else immediately return false
         guard s.count == t.count else { return false }
@@ -54,6 +57,7 @@ class Solution {
     
     // straight way with hash table using high order functions
     // time complexity = O(n+m), where n is the lentgh of `s` and m is the length of `t`
+    // space complexity = O(n), where n is the lentgh of `s`
     func isAnagramHigh(_ s: String, _ t: String) -> Bool {
         // first check if the lengths are equal else immediately return false
         guard s.count == t.count else { return false }
@@ -65,29 +69,95 @@ class Solution {
         
         // iterate the second word
         for char in t {
-            // check if have have the same letter in the hash table and if the count of these letters is more than 0
-            if hashTable[char] != nil && hashTable[char]! > 0 {
-                // decrement the count of this letter in the hash table
-                hashTable[char]! -= 1
-            } else {
-                // otherwise immediately return false
-                return false
-            }
+            // check if have have the same letter in the hash table and if the count of these letters is more than 0, otherwise immediately return false
+            guard hashTable[char] != nil,
+                  hashTable[char]! > 0  else { return false }
+            // decrement the count of this letter in the hash table
+            hashTable[char]! -= 1
         }
         
         // if all the letters from "t" are in the "s" and their count is equal then return true
         return true
-        
     }
     
     
-    // short solution but without early return
+    // short solution but without early return and not clear
     // time complexity = O(n+m), where n is the lentgh of `s` and m is the length of `t`
+    // space complexity = O(n+m), where n is the lentgh of `s` and m is the length of `t`
     func isAnagramOneLiner(_ s: String, _ t: String) -> Bool {
         Dictionary(s.map { ($0, 1) }, uniquingKeysWith: +) == Dictionary(t.map { ($0, 1) }, uniquingKeysWith: +)
     }
 }
-let solution = Solution()
-let s = "anagram", t = "nagaram"
-solution.isAnagram(s, t)
-solution.isAnagramHigh(s, t)
+
+class SolutuonTests: XCTestCase {
+    
+    let solution = Solution()
+    
+    func testIsAnagramReturnTrueWhenTheGivenWordsAreAnagram() {
+        // given
+        let s = "anagram", t = "nagaram"
+        
+        // when
+        let result = solution.isAnagram(s, t)
+        
+        // then
+        XCTAssertTrue(result)
+    }
+    
+    func testIsAnagramReturnFalseWhenTheGivenWordsAreNotAnagram() {
+        // given
+        let s = "rat", t = "car"
+        
+        // when
+        let result = solution.isAnagram(s, t)
+        
+        // then
+        XCTAssertFalse(result)
+    }
+    
+    func testIsAnagramHighReturnTrueWhenTheGivenWordsAreAnagram() {
+        // given
+        let s = "anagram", t = "nagaram"
+        
+        // when
+        let result = solution.isAnagram(s, t)
+        
+        // then
+        XCTAssertTrue(result)
+    }
+    
+    func testIsAnagramHighReturnFalseWhenTheGivenWordsAreNotAnagram() {
+        // given
+        let s = "rat", t = "car"
+        
+        // when
+        let result = solution.isAnagram(s, t)
+        
+        // then
+        XCTAssertFalse(result)
+    }
+    
+    func testIsAnagramOneLinerReturnTrueWhenTheGivenWordsAreAnagram() {
+        // given
+        let s = "anagram", t = "nagaram"
+        
+        // when
+        let result = solution.isAnagram(s, t)
+        
+        // then
+        XCTAssertTrue(result)
+    }
+    
+    func testIsAnagramOneLinerReturnFalseWhenTheGivenWordsAreNotAnagram() {
+        // given
+        let s = "rat", t = "car"
+        
+        // when
+        let result = solution.isAnagram(s, t)
+        
+        // then
+        XCTAssertFalse(result)
+    }
+}
+
+SolutuonTests.defaultTestSuite.run()
