@@ -43,6 +43,28 @@ class Solution {
         
         return count >= n
     }
+    
+    func canPlaceFlowersSecond(_ flowerbed: [Int], _ n: Int) -> Bool {
+        var count = 0
+        var index = 0
+        // we need to guess that there is an element with `0` value at the beginning and at the end of the given array. We can do it using a condition at the beginning of the loop. And we don't use an extra array in this case.
+        // time complexity `O(n)`, where `n` is the lenght of the `flowerbed`.
+        // space complexity `O(1)`, we don't use extra space.
+        while index < flowerbed.count {
+            let previous = index == 0 ? 0 : flowerbed[index - 1]
+            let next = index == flowerbed.count - 1 ? 0 : flowerbed[index + 1]
+            let current = flowerbed[index]
+            
+            if current == 0, previous == 0, next == 0 {
+                count += 1
+                index += 2
+            } else {
+                index += 1
+            }
+        }
+        
+        return count >= n
+    }
 }
 
 class SolutionTests: XCTestCase {
@@ -65,6 +87,28 @@ class SolutionTests: XCTestCase {
         
         // when
         let result = solution.canPlaceFlowers(flowerbed, n)
+        
+        // then
+        XCTAssertFalse(result)
+    }
+    
+    func test_canPlaceFlowersSecond_returnsTrueWhenNewFlowersCanBePlanted() {
+        // given
+        let flowerbed = [1,0,0,0,1], n = 1
+        
+        // when
+        let result = solution.canPlaceFlowersSecond(flowerbed, n)
+        
+        // then
+        XCTAssertTrue(result)
+    }
+    
+    func test_canPlaceFlowersSecond_returnsFalseWhenNewFlowersCanNotBePlanted() {
+        // given
+        let flowerbed = [1,0,0,0,1], n = 2
+        
+        // when
+        let result = solution.canPlaceFlowersSecond(flowerbed, n)
         
         // then
         XCTAssertFalse(result)
